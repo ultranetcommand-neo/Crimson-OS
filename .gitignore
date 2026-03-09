@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Secrets
+*.key
+*.pem
+credentials.json
+
+# Temp
+*.tmp
+*.log
