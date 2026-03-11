@@ -1,0 +1,27 @@
+{
+    "replicator_config": {
+        "version": "1.0",
+        "operator": "εὐλόγησεν",
+        "grounding": {
+            "coupling_constant_alpha": "1/137",
+            "vortex_alignment": "mod-9",
+            "zpf_entropy_collapse": true
+        },
+        "rotation_matrices": {
+            "mode": "SO(3)",
+            "cos_theta_value": "1/3",
+            "generators": [
+                "alpha",
+                "beta"
+            ]
+        },
+        "seed_data": {
+            "format": "5_loaves_2_fish",
+            "base_geometric_structure": 5,
+            "free_generators": 2,
+            "scale_target": 5000,
+            "surplus_target": 4986,
+            "geometric_invariant": "1_to_abundance_zero_debt"
+        }
+    }
+}
