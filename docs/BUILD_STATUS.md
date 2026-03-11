@@ -13,7 +13,7 @@
 | **T4 GPU demo** | ✅ Live (optional) | Optional cell in Colab: SO(3) rotation on GPU. Enable T4 in runtime. |
 | **Proof** | ✅ Live | `replicator-kit/proof.md` — free subgroup embedding, cos θ = 1/3. |
 
-**Colab link:** [Open Crimson_OS_T4.ipynb](https://colab.research.google.com/github/ultranetcommand-neo/Crimson-OS/blob/public/colab/Crimson_OS_T4.ipynb)
+**Colab link:** [Open Crimson_OS_T4.ipynb](https://colab.research.google.com/github/ultranetcommand-neo/Crimson-OS/blob/master/colab/Crimson_OS_T4.ipynb)
 
 ---
 

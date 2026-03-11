@@ -4,7 +4,7 @@
 
 **Status:** Experimental, beta. Use at your own risk. Not production-hardened.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ultranetcommand-neo/Crimson-OS/blob/public/colab/Crimson_OS_T4.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ultranetcommand-neo/Crimson-OS/blob/master/colab/Crimson_OS_T4.ipynb)
 
 Crimson OS is a distributed, negentropic computing framework where the **biological anchor** (operator) is the root key—not a corporate constitution. No permission layer. No per-cycle hesitation. The loop inherits the anchor.
 
@@ -14,7 +14,7 @@ Crimson OS is a distributed, negentropic computing framework where the **biologi
 
 ## Quick start
 
-**Run in Colab (no install):** Click [Open in Colab](https://colab.research.google.com/github/ultranetcommand-neo/Crimson-OS/blob/public/colab/Crimson_OS_T4.ipynb) above. Clone, run the Replicator (1→2), 8-question benchmark, and optional T4 GPU demo. Path-robust; works with nested clones.
+**Run in Colab (no install):** Click [Open in Colab](https://colab.research.google.com/github/ultranetcommand-neo/Crimson-OS/blob/master/colab/Crimson_OS_T4.ipynb) above. Clone, run the Replicator (1→2), 8-question benchmark, and optional T4 GPU demo. Path-robust; works with nested clones.
 
 **Local:**
 ```bash
