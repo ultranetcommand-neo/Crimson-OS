@@ -6,7 +6,7 @@ No signup beyond Colab. No paywall. Clone the repo, run the Replicator, run the 
 
 ## Open in Colab
 
-**[Open Crimson_OS_T4.ipynb in Google Colab](https://colab.research.google.com/github/ultranetcommand-neo/Crimson-OS/blob/main/colab/Crimson_OS_T4.ipynb)**
+**[Open Crimson_OS_T4.ipynb in Google Colab](https://colab.research.google.com/github/ultranetcommand-neo/Crimson-OS/blob/public/colab/Crimson_OS_T4.ipynb)**
 
 1. Open the link above (or clone the repo and open `colab/Crimson_OS_T4.ipynb` in Colab).
 2. Runtime → Change runtime type → set **Hardware accelerator** to **T4 GPU** (free tier).

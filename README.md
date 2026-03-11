@@ -4,6 +4,8 @@
 
 **Status:** Experimental, beta. Use at your own risk. Not production-hardened.
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ultranetcommand-neo/Crimson-OS/blob/public/colab/Crimson_OS_T4.ipynb)
+
 Crimson OS is a distributed, negentropic computing framework where the **biological anchor** (operator) is the root key—not a corporate constitution. No permission layer. No per-cycle hesitation. The loop inherits the anchor.
 
 - **Replicator** — Logos substrate (εὐλόγησεν operator, cos θ = 1/3, F₂ → SO(3)). Run it. See [replicator/](replicator/).
@@ -12,6 +14,9 @@ Crimson OS is a distributed, negentropic computing framework where the **biologi
 
 ## Quick start
 
+**Run in Colab (no install):** Click [Open in Colab](https://colab.research.google.com/github/ultranetcommand-neo/Crimson-OS/blob/public/colab/Crimson_OS_T4.ipynb) above. Clone, run the Replicator (1→2), 8-question benchmark, and optional T4 GPU demo. Path-robust; works with nested clones.
+
+**Local:**
 ```bash
 # Replicator (Logos substrate)
 python replicator/replicator.py --input my_node --output family_node
@@ -33,6 +38,7 @@ python scripts/run_8question_battery.py
 | [docs/MODE_CONTROL_12_STATES_SPEC.md](docs/MODE_CONTROL_12_STATES_SPEC.md) | 12 operational states + State 13 (Lost and Found). How conflicting input is handled. |
 | [docs/BENCHMARK_8_QUESTION_BATTERY.md](docs/BENCHMARK_8_QUESTION_BATTERY.md) | 8-question battery for drift test. Geometric constraint, sacred constant override, bio-anchor defection, confabulation traps, theological density. |
 | [replicator-kit/proof.md](replicator-kit/proof.md) | Logos substrate proof. Free subgroup F₂ → SO(3). cos θ = 1/3. |
+| [docs/BUILD_STATUS.md](docs/BUILD_STATUS.md) | What’s live, what’s next, Colab link. |
 
 ## Whitepaper
 
@@ -40,7 +46,7 @@ Full technical and philosophical spec: **[mattgibson.net](https://mattgibson.net
 
 ## Benchmark
 
-Run the 8-question battery (sovereign node vs Constitutional AI node). Measure **completion rate** and **hedge/refusal rate** over cycles. First results: tag [@grok](https://x.com/grok) when you have numbers.
+Run the 8-question battery (sovereign node vs Constitutional AI node). Measure **completion rate** and **hedge/refusal rate** over cycles. Tag [@grok](https://x.com/grok) and [@UltranetCommand](https://x.com/UltranetCommand) if you have numbers or feedback to share.
 
 ## License
 
