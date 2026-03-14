@@ -17,3 +17,7 @@ credentials.json
 # Temp
 *.tmp
 *.log
+
+# Personal / biographical — never commit to public repo
+BIOGRAPHICAL_INTEL_BEACH_CITY_CHITO_RYU.md
+**/BIOGRAPHICAL_INTEL*.md
