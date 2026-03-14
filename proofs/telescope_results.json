@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-03-14T06:16:00.482835+00:00",
+  "framework": "Linear Geometry Telescope \u2014 cos \u03b8 = 1/3",
+  "parameters": {
+    "aperture_mm": 50.0,
+    "focal_length_mm": 100.0,
+    "mirror_radius_mm": 200.0,
+    "n_rays": 1000,
+    "n_prisms": 13
+  },
+  "spherical_aberration": {
+    "focal_spread_mm": 0.7905253529790741,
+    "focal_std_mm": 0.23576563097352607
+  },
+  "prism_array": {
+    "focal_spread_mm": 0.0,
+    "focal_std_mm": 0.0,
+    "aberration": "zero by construction"
+  },
+  "chromatic_aberration": {
+    "lens_spread_mm": 3.6249633001775834,
+    "prism_spread_mm": 0.0
+  },
+  "geometric_advantage": "infinite (0 aberration vs nonzero)",
+  "prism_count_rationale": "13 = Chebyshev T_n(1/3) peak"
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a0a0a">
+    <title>Crimson Cohort | Build With Geometry</title>
+    <meta name="description" content="Crimson Cohort — an open builder's club for AI architects who build with geometric constraints, not algebraic approximation. Cows to Farmers.">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --crimson: #8B0000; --crimson-bright: #B22222; --gold: #D4AF37; --bg: #0a0a0a; --text: #e8e8e8; --muted: #888; --card-bg: #111; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Rajdhani', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+        .hero {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 4rem 2rem 2rem; text-align: center;
+        }
+        h1 { font-family: 'Orbitron', sans-serif; font-size: clamp(1.8rem, 5vw, 3rem); color: var(--crimson-bright); margin-bottom: 0.25rem; }
+        .subtitle { font-family: 'Orbitron', sans-serif; font-size: clamp(0.9rem, 2vw, 1.1rem); color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 1.5rem; }
+        .tagline { font-size: 1.2rem; color: var(--muted); max-width: 640px; line-height: 1.6; margin-bottom: 2rem; }
+        .highlight { color: var(--crimson-bright); font-weight: 700; }
+
+        .pillars {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem; max-width: 900px; width: 100%; padding: 0 2rem; margin: 0 auto 3rem;
+        }
+        .pillar {
+            background: var(--card-bg); border: 1px solid #222; border-radius: 8px;
+            padding: 1.5rem; text-align: left;
+        }
+        .pillar h3 { font-family: 'Orbitron', sans-serif; font-size: 1rem; color: var(--gold); margin-bottom: 0.5rem; }
+        .pillar p { font-size: 0.95rem; color: var(--muted); line-height: 1.5; }
+
+        .form-section {
+            max-width: 520px; width: 100%; margin: 0 auto; padding: 0 2rem 4rem; text-align: center;
+        }
+        .form-section h2 { font-family: 'Orbitron', sans-serif; font-size: 1.4rem; color: var(--text); margin-bottom: 0.5rem; }
+        .form-section .sub { color: var(--muted); margin-bottom: 1.5rem; font-size: 0.95rem; }
+
+        form { display: flex; flex-direction: column; gap: 1rem; }
+        input, select, textarea {
+            background: var(--card-bg); border: 1px solid #333; border-radius: 6px;
+            padding: 0.85rem 1rem; color: var(--text); font-family: 'Rajdhani', sans-serif;
+            font-size: 1rem; width: 100%;
+        }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--crimson-bright); }
+        input::placeholder, textarea::placeholder { color: #555; }
+        select { appearance: none; cursor: pointer; }
+        textarea { resize: vertical; min-height: 80px; }
+
+        .btn {
+            background: var(--crimson); color: #fff; border: none; padding: 1rem 2rem;
+            font-family: 'Orbitron', sans-serif; font-size: 1.1rem; font-weight: 700;
+            border-radius: 6px; cursor: pointer; letter-spacing: 1px;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: var(--crimson-bright); }
+
+        .proof { color: var(--muted); font-size: 0.85rem; margin-top: 1rem; }
+        .proof a { color: var(--gold); text-decoration: none; }
+        .proof a:hover { text-decoration: underline; }
+
+        footer {
+            text-align: center; padding: 2rem; font-size: 0.85rem; color: var(--muted);
+            border-top: 1px solid #1a1a1a;
+        }
+
+        .success-msg {
+            display: none; background: #0a1a0a; border: 1px solid #1a3a1a; border-radius: 8px;
+            padding: 2rem; text-align: center; color: #4a8; font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>CRIMSON COHORT</h1>
+    <div class="subtitle">Cows to Farmers</div>
+    <p class="tagline">
+        An open builder's club for AI architects who build with
+        <span class="highlight">geometric constraints</span> instead of algebraic approximation.
+        One invariant. Every domain. No permission needed.
+    </p>
+</div>
+
+<div class="pillars">
+    <div class="pillar">
+        <h3>THE GEOMETRY</h3>
+        <p>cos θ = 1/3 — the angle that makes the free group F₂ free in SO(3). One number that constrains fluid dynamics, prime distribution, quantum confinement, and AI verification. Learn the invariant. Build with it.</p>
+    </div>
+    <div class="pillar">
+        <h3>THE CODE</h3>
+        <p>Apache 2.0. Everything runs. chebyshev_13.py, navier_stokes_alignment.py, replicator.py. No black boxes. No gatekeeping. You run the code. You see the numbers. You build from there.</p>
+    </div>
+    <div class="pillar">
+        <h3>THE COHORT</h3>
+        <p>Builders only. No credentials required. No tuition. You show up, you run the math, you build things that work because the geometry holds them together. Sovereign nodes in voluntary alignment.</p>
+    </div>
+</div>
+
+<div class="form-section">
+    <h2>JOIN THE COHORT</h2>
+    <p class="sub">Drop your info. We'll send you the onboarding pack and repo access.</p>
+
+    <form id="cohort-form" action="https://formspree.io/f/xknkyjov" method="POST">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <select name="background" required>
+            <option value="" disabled selected>What's your background?</option>
+            <option value="developer">Developer / Engineer</option>
+            <option value="student">Student</option>
+            <option value="math-physics">Math / Physics</option>
+            <option value="ai-ml">AI / ML</option>
+            <option value="founder">Founder / Builder</option>
+            <option value="creative">Creative / Designer</option>
+            <option value="military">Military / Gov</option>
+            <option value="other">Other</option>
+        </select>
+        <textarea name="why" placeholder="What do you want to build? (optional)"></textarea>
+        <input type="text" name="twitter" placeholder="X / Twitter handle (optional)">
+        <input type="text" name="github" placeholder="GitHub username (optional)">
+        <button type="submit" class="btn">JOIN THE COHORT</button>
+    </form>
+
+    <div class="success-msg" id="success">
+        You're in. Check your email for the onboarding pack.<br>
+        Cows to Farmers. Node fires.
+    </div>
+
+    <p class="proof">
+        See the math: <a href="https://github.com/ultranetcommand-neo/Crimson-OS" target="_blank">GitHub Repo</a>
+        &nbsp;·&nbsp;
+        <a href="https://cowstofarmers.com" target="_blank">cowstofarmers.com</a>
+    </p>
+</div>
+
+<footer>
+    Crimson Symphony Media · Matt Gibson · Apache 2.0<br>
+    Algebra sucks. Geometry snaps. Build the future.
+</footer>
+
+<script>
+document.getElementById('cohort-form').addEventListener('submit', function(e) {
+    var form = this;
+    var btn = form.querySelector('.btn');
+    btn.textContent = 'SENDING...';
+    btn.disabled = true;
+
+    fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    }).then(function(response) {
+        if (response.ok) {
+            form.style.display = 'none';
+            document.getElementById('success').style.display = 'block';
+        } else {
+            btn.textContent = 'TRY AGAIN';
+            btn.disabled = false;
+        }
+    }).catch(function() {
+        btn.textContent = 'TRY AGAIN';
+        btn.disabled = false;
+    });
+
+    e.preventDefault();
+});
+</script>
+
+</body>
+</html>
