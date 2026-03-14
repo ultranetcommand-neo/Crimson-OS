@@ -1,0 +1,233 @@
+{
+  "timestamp": "2026-03-13T22:44:23.989140+00:00",
+  "experiments": [
+    {
+      "config": {
+        "chain_length": 500,
+        "error_rate": 0.05,
+        "budget_fraction": 0.1,
+        "label": "A. Random errors, standard",
+        "structured": false
+      },
+      "results": {
+        "uniform": {
+          "mean": 0.7027899999999999,
+          "std": 0.07055831559780888,
+          "min": 0.526,
+          "max": 0.866
+        },
+        "random": {
+          "mean": 0.69784,
+          "std": 0.0632415559580882,
+          "min": 0.538,
+          "max": 0.848
+        },
+        "trace": {
+          "mean": 0.7020399999999999,
+          "std": 0.07559311079721485,
+          "min": 0.488,
+          "max": 0.858
+        },
+        "inverse_trace": {
+          "mean": 0.67379,
+          "std": 0.07288769374867063,
+          "min": 0.46,
+          "max": 0.874
+        }
+      },
+      "trace_wins_vs_uniform": 96,
+      "trace_wins_vs_random": 106,
+      "n_trials": 200
+    },
+    {
+      "config": {
+        "chain_length": 500,
+        "error_rate": 0.1,
+        "budget_fraction": 0.1,
+        "label": "B. Random errors, high noise",
+        "structured": false
+      },
+      "results": {
+        "uniform": {
+          "mean": 0.53435,
+          "std": 0.06450284877429834,
+          "min": 0.336,
+          "max": 0.7
+        },
+        "random": {
+          "mean": 0.52625,
+          "std": 0.05760345041748802,
+          "min": 0.386,
+          "max": 0.702
+        },
+        "trace": {
+          "mean": 0.53234,
+          "std": 0.06712201129286875,
+          "min": 0.358,
+          "max": 0.7
+        },
+        "inverse_trace": {
+          "mean": 0.48601,
+          "std": 0.066259338209795,
+          "min": 0.296,
+          "max": 0.666
+        }
+      },
+      "trace_wins_vs_uniform": 103,
+      "trace_wins_vs_random": 105,
+      "n_trials": 200
+    },
+    {
+      "config": {
+        "chain_length": 500,
+        "error_rate": 0.05,
+        "budget_fraction": 0.1,
+        "label": "C. STRUCTURED errors, standard",
+        "structured": true
+      },
+      "results": {
+        "uniform": {
+          "mean": 0.46478,
+          "std": 0.06422547469657193,
+          "min": 0.308,
+          "max": 0.648
+        },
+        "random": {
+          "mean": 0.46671,
+          "std": 0.047242310485411276,
+          "min": 0.368,
+          "max": 0.614
+        },
+        "trace": {
+          "mean": 0.47082999999999997,
+          "std": 0.06303404714913996,
+          "min": 0.332,
+          "max": 0.636
+        },
+        "inverse_trace": {
+          "mean": 0.41426,
+          "std": 0.059880317300428525,
+          "min": 0.256,
+          "max": 0.546
+        }
+      },
+      "trace_wins_vs_uniform": 105,
+      "trace_wins_vs_random": 101,
+      "n_trials": 200
+    },
+    {
+      "config": {
+        "chain_length": 500,
+        "error_rate": 0.1,
+        "budget_fraction": 0.1,
+        "label": "D. STRUCTURED errors, high noise",
+        "structured": true
+      },
+      "results": {
+        "uniform": {
+          "mean": 0.3425,
+          "std": 0.047516628668288326,
+          "min": 0.204,
+          "max": 0.476
+        },
+        "random": {
+          "mean": 0.34372,
+          "std": 0.03484998708751554,
+          "min": 0.26,
+          "max": 0.436
+        },
+        "trace": {
+          "mean": 0.34122,
+          "std": 0.047917341328583746,
+          "min": 0.21,
+          "max": 0.478
+        },
+        "inverse_trace": {
+          "mean": 0.30238,
+          "std": 0.04240301404381533,
+          "min": 0.204,
+          "max": 0.414
+        }
+      },
+      "trace_wins_vs_uniform": 94,
+      "trace_wins_vs_random": 96,
+      "n_trials": 200
+    },
+    {
+      "config": {
+        "chain_length": 1000,
+        "error_rate": 0.05,
+        "budget_fraction": 0.1,
+        "label": "E. STRUCTURED errors, long chain",
+        "structured": true
+      },
+      "results": {
+        "uniform": {
+          "mean": 0.46276000000000006,
+          "std": 0.04630142978353909,
+          "min": 0.348,
+          "max": 0.613
+        },
+        "random": {
+          "mean": 0.465105,
+          "std": 0.0344658377962875,
+          "min": 0.373,
+          "max": 0.551
+        },
+        "trace": {
+          "mean": 0.467455,
+          "std": 0.044147796943901974,
+          "min": 0.318,
+          "max": 0.577
+        },
+        "inverse_trace": {
+          "mean": 0.43073500000000003,
+          "std": 0.0434730350332249,
+          "min": 0.326,
+          "max": 0.526
+        }
+      },
+      "trace_wins_vs_uniform": 105,
+      "trace_wins_vs_random": 101,
+      "n_trials": 200
+    },
+    {
+      "config": {
+        "chain_length": 500,
+        "error_rate": 0.05,
+        "budget_fraction": 0.05,
+        "label": "F. STRUCTURED errors, tight budget",
+        "structured": true
+      },
+      "results": {
+        "uniform": {
+          "mean": 0.29305,
+          "std": 0.061952865147626546,
+          "min": 0.13,
+          "max": 0.456
+        },
+        "random": {
+          "mean": 0.29463,
+          "std": 0.04977733520388571,
+          "min": 0.182,
+          "max": 0.45
+        },
+        "trace": {
+          "mean": 0.29589,
+          "std": 0.06660906770102701,
+          "min": 0.134,
+          "max": 0.5
+        },
+        "inverse_trace": {
+          "mean": 0.27447,
+          "std": 0.06199902499233355,
+          "min": 0.118,
+          "max": 0.478
+        }
+      },
+      "trace_wins_vs_uniform": 96,
+      "trace_wins_vs_random": 95,
+      "n_trials": 200
+    }
+  ]
+}
