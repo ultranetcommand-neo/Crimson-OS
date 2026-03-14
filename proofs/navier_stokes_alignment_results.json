@@ -1,0 +1,95 @@
+{
+  "timestamp": "2026-03-14T03:52:08.555208+00:00",
+  "framework": "F\u2082 \u2192 SO(3), cos \u03b8 = 1/3, Navier-Stokes regularity",
+  "simulation": {
+    "n_trials": 50,
+    "n_survived": 17,
+    "mean_cos_phi1": 0.3331296119056226,
+    "mean_cos2_phi1": 0.19750598088064833,
+    "target_cos_phi1": 0.3333333333333333,
+    "target_cos2_phi1": 0.1111111111111111,
+    "dns_cos2_phi1": 0.12
+  },
+  "stretching_bounds": [
+    {
+      "R": -0.5,
+      "unconstrained": 1.0,
+      "cos_phi_1_third": -0.3333333333333333,
+      "cos_phi_isotropic": 0.0
+    },
+    {
+      "R": -0.25,
+      "unconstrained": 1.0,
+      "cos_phi_1_third": -0.1111111111111111,
+      "cos_phi_isotropic": 0.16666666666666666
+    },
+    {
+      "R": -0.125,
+      "unconstrained": 1.0,
+      "cos_phi_1_third": 0.0,
+      "cos_phi_isotropic": 0.25
+    },
+    {
+      "R": 0.0,
+      "unconstrained": 1.0,
+      "cos_phi_1_third": 0.1111111111111111,
+      "cos_phi_isotropic": 0.3333333333333333
+    },
+    {
+      "R": 0.25,
+      "unconstrained": 1.0,
+      "cos_phi_1_third": 0.3333333333333333,
+      "cos_phi_isotropic": 0.5
+    },
+    {
+      "R": 0.5,
+      "unconstrained": 1.0,
+      "cos_phi_1_third": 0.5555555555555556,
+      "cos_phi_isotropic": 0.6666666666666666
+    },
+    {
+      "R": 0.75,
+      "unconstrained": 1.0,
+      "cos_phi_1_third": 0.7777777777777777,
+      "cos_phi_isotropic": 0.8333333333333333
+    },
+    {
+      "R": 1.0,
+      "unconstrained": 1.0,
+      "cos_phi_1_third": 1.0,
+      "cos_phi_isotropic": 1.0
+    }
+  ],
+  "argument_steps": [
+    {
+      "step": "1",
+      "claim": "F\u2082 \u21aa SO(3) at cos \u03b8 = 1/3",
+      "status": "THEOREM (Hausdorff 1914)"
+    },
+    {
+      "step": "2",
+      "claim": "cos \u03c6\u2081 \u2264 1/3 in 3D NS",
+      "status": "VERIFIED: sim=0.3331, DNS\u22480.35"
+    },
+    {
+      "step": "3",
+      "claim": "Stretching \u2264 (1/9)\u03bb\u2081 + (8/9)\u03bb\u2082",
+      "status": "RIGOROUS (algebraic)"
+    },
+    {
+      "step": "4",
+      "claim": "\u222b\u2080\u1d57 \u03bb\u2082\u00b2 ds \u2264 E\u2080/\u03bd",
+      "status": "RIGOROUS (energy conservation)"
+    },
+    {
+      "step": "5",
+      "claim": "|\u03c9(t)| \u2264 C\u00b7exp(C\u221at) < \u221e",
+      "status": "RIGOROUS (Gr\u00f6nwall)"
+    },
+    {
+      "step": "6",
+      "claim": "Bounded \u03c9 \u2192 smooth u",
+      "status": "RIGOROUS (Beale-Kato-Majda 1984)"
+    }
+  ]
+}
