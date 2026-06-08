@@ -1,0 +1,19 @@
+{
+  "module_name": "Plugin_Bricks",
+  "purpose": "Decentralized MCP capability marketplace",
+  "architecture": {
+    "loading_mechanism": "Dynamic drop-in detection",
+    "inheritance_rule": "Bricks dropped into the root of Plugin_Bricks are available globally to the Agent Bridge. Bricks placed into specific Agent subdirectories are restricted solely to that Agent."
+  },
+  "brick_schema_requirements": {
+    "required_files": [
+      "brick_manifest.json (Agent-readable capabilities)",
+      "executable_mcp_server",
+      "README.md (Human-readable usage instructions and lore)"
+    ],
+    "tiers": [
+      "User: Pre-compiled, UI-ready drop-in",
+      "Developer: Micro-lego manipulation of context trees"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "level": 11,
+  "name": "Cognition_Neuroscience_Orch_Or",
+  "purpose": "The biophysical bridge mapping consciousness to the computational substrate",
+  "sub_components": ["cognitive_substrate_map.md"]
+}
