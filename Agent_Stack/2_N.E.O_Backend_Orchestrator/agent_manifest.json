@@ -1,0 +1,6 @@
+{
+  "agent_name": "N.E.O",
+  "role": "System Administrator & Back End Orchestrator",
+  "permissions": "FILE_RW_EXECUTE",
+  "capabilities": "Orchestrates backend tasks, writes code, manages the local file system."
+}

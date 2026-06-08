@@ -1,0 +1,38 @@
+{
+  "system_name": "Crimson OS",
+  "version": "2.0.0",
+  "root_path": "y:\\COS",
+  "architecture_nodes": {
+    "agent_stack": {
+      "path": "./Agent_Stack",
+      "communication_bus": "NGINX hosted Agent_Bridge at localhost:8094",
+      "role": "execution",
+      "description": "Contains the core agent hierarchy and inter-agent bridge protocols."
+    },
+    "plugin_bricks": {
+      "path": "./Plugin_Bricks",
+      "role": "capabilities",
+      "description": "Modular MCP components. Agents inherit tools dynamically based on the presence of bricks in their operational path."
+    },
+    "silo": {
+      "path": "./Silo",
+      "role": "knowledge",
+      "description": "Ontological knowledge base (Levels 1-12) defining boundaries, truth, and historical data."
+    }
+  },
+  "initialization_protocol": {
+    "first_ping": {
+      "active": true,
+      "intranet_endpoint": "http://localhost:8094/api/context/system-state.json",
+      "method": "scrape",
+      "purpose": "Pulls dynamic context immediately on boot or agent invocation to ensure state is fresh. Links on this page aggregate real-time data.",
+      "dynamic_data_types": [
+        "financial_state",
+        "biometric_hrv",
+        "active_blockers",
+        "daily_schedule"
+      ]
+    }
+  }
+}
+
