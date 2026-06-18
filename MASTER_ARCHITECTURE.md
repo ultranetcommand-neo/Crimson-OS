@@ -106,6 +106,7 @@ CRYSTAL ──[periodic re-audit vs reality]──▶ holds  │  drifts → DEM
 - **Structure drives Gas→Liquid** (internal coherence/argument). **Correspondence with reality drives Liquid→Crystal** (data/measurement). *Structure is not truth; the pull is not the certificate.*
 - **Annealing:** a false crystal is deliberately re-melted and re-analyzed. Even the densest crystal stays anneal-able. The gate's defining power is that **it can say NO.**
 - **Archive, don't delete:** crystallize the working set hot; cold-archive the gas with a provenance pointer (you can't demote what you can't trace).
+- **CCDE diagnostic spine:** the **Crew Chief Diagnostic Engine** (`docs/CCDE.md`) — bifurcated Standalone Engineering (SCONE · HCAM 8-class taxonomy · edge inference) + **Provenance Memoir** (47-year operator timeline · Doctor Crusher · DisruptPTSD). Failure classes I–VIII tag friction-log events and IG trip conditions. **RECONCILIATION CANDIDATE** until operator ratifies.
 
 ### 5.3 Validation triad (the 3 Deans — DESIGNED)
 | Dean | Validates | Rings |

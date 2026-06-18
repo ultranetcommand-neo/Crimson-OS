@@ -1,4 +1,4 @@
-CRIMSON OS — The Sovereign Agent Architecture
+CRIMSON OS ï¿½ The Sovereign Agent Architecture
 Documentation: https://www.crimsonsymphonymedia.com/crimsonos/
 # Crimson OS: Index of Terms & Concepts
 
@@ -38,5 +38,11 @@ The Cockpit (Node 1). The human-in-the-loop bridge and primary user interface. I
 
 ### CMO / Edge Orchestrator
 The edge routing daemon (Node 2). Responsible for managing external network traffic, API intake, Nginx tunneling, and basic automation (n8n) before passing data to the inner sanctum.
+
+### Crew Chief Diagnostic Engine (CCDE)
+The closed-loop diagnostic spine documented in `docs/CCDE.md`. Two branches: **Standalone Engineering** (SCONE offloaded n-gram embeddings, HCAM 8-class failure taxonomy, Poole/ARCHITECT monitor) and **Provenance Memoir** (operator life-span timeline, HRV/retinal targeting, DisruptPTSD lane). Failure classes Iâ€“VIII map to epistemic gate leaks, hardware fractures, glider collisions, geometry drift, and provenance fragmentation. Status: RECONCILIATION CANDIDATE.
+
+### Silo Index (SILO_INDEX.md)
+One-page public map of the 12-ring ontology with phase labels (CRYSTAL / LIQUID / LIVE / SCAFFOLDING / etc.), load-bearing file paths, explicit off-repo boundaries, and a paste-ready external reviewer script. Use this to show reviewers the Silo without exposing private operator data.
 
 

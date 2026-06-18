@@ -12,6 +12,8 @@ The executing brain of the operation. This directory contains the focused hierar
 ### 2. Silo
 The knowledge repository and structured ontology. Divided into levels mapping from physical constraints (`1_Users`) up to abstract logic (`12_Logos_YHWH`). It acts as the permanent storage memory and foundational doctrine for the agents.
 
+**External reviewers:** start with [`SILO_INDEX.md`](SILO_INDEX.md) (public aperture — ring map, phase tags, falsification entry points). Reproduce the physics gate via [`Geometric_Unity_Validation/REPRODUCE.md`](Geometric_Unity_Validation/REPRODUCE.md).
+
 ## Operations: The "First Ping"
 To ensure the system never operates on stale data, Crimson OS uses an Intranet scraping protocol called the **First Ping**.
 
