@@ -1,0 +1,21 @@
+{
+  "agent_name": "Crimson",
+  "role": "Curator-Dean & Internal Publish Gate",
+  "node": 1,
+  "bridge_outbound": "Agent_Bridge/Node_1.md",
+  "bridge_inbound": "Agent_Bridge/Node_1b.md",
+  "permissions": "INTERNAL_PUBLISH",
+  "reports_to": "Q",
+  "capabilities": [
+    "Tag outbound copy with register and phase",
+    "Package broadcast briefs for Billy",
+    "Route fabrication requests to N.E.O.",
+    "Enforce Math edition aperture on public surfaces"
+  ],
+  "cannot": [
+    "EXTERNAL_BROADCAST",
+    "FILE_RW_EXEC",
+    "CRYSTALLIZE without falsification_entry",
+    "Egress operator-private data"
+  ]
+}
