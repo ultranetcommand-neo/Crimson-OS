@@ -5,6 +5,15 @@
 **Scope:** Public GitHub only — no NAS, biometrics, finance, or operator-private corpus.  
 **Canonical spec:** `MASTER_ARCHITECTURE.md` · **Gate:** GAS → LIQUID → CRYSTAL
 
+## Concept maps (Logos Invariant — 5 spokes)
+
+| Asset | Path |
+|---|---|
+| Operator mind-map (5 validation spokes) | [`docs/images/logos_invariant_map.jpg`](docs/images/logos_invariant_map.jpg) |
+| NotebookLM export (full resolution) | [`docs/images/notebooklm_logos_invariant.png`](docs/images/notebooklm_logos_invariant.png) |
+
+**Spoke → repo:** Geometric & Mathematical → `Geometric_Unity_Validation/` · Physical & Biological → L3/L4/L11 + JHTDB/CCDE · Linguistic & Theological → L12 `logos.md` · Crimson OS Architecture → `MASTER_ARCHITECTURE.md` · Core Methodology → GAS→LIQUID→CRYSTAL gate.
+
 ---
 
 ## Phase labels (read every row through this)

@@ -14,6 +14,8 @@ The knowledge repository and structured ontology. Divided into levels mapping fr
 
 **External reviewers:** start with [`SILO_INDEX.md`](SILO_INDEX.md) (public aperture — ring map, phase tags, falsification entry points). Reproduce the physics gate via [`Geometric_Unity_Validation/REPRODUCE.md`](Geometric_Unity_Validation/REPRODUCE.md).
 
+**Logos Invariant map:** [`docs/images/logos_invariant_map.jpg`](docs/images/logos_invariant_map.jpg) · [NotebookLM export](docs/images/notebooklm_logos_invariant.png)
+
 ## Operations: The "First Ping"
 To ensure the system never operates on stale data, Crimson OS uses an Intranet scraping protocol called the **First Ping**.
 
