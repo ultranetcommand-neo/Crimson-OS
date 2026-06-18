@@ -41,11 +41,11 @@ This document obeys, and enforces, five rules taken from CrimsonOS's own archite
 CrimsonOS runs **two workstreams on shared infrastructure** (they are *parallel*, not yet a closed loop):
 
 - **Research engine** — falsifiable math/physics anchored on one geometric constant.
-- **Survival operation** — LV→WV relocation (~2026-07-20), cash/health/logistics deadlines.
+- **Survival operation** — operator-private relocation, cash/health/logistics deadlines. *(Geography and calendar dates live on the operator spine only — never in public docs.)*
 
 **The Vision stack** (`MASTER_VISION_ARCHITECTURE.md`, ASPIRATIONAL) sits *above* both and its own status line already states the rule:
 `Foundation (housing/body/mind/money) → Fuel (rideshare/flips/LOGOS) → Content+IP → Platforms → Hardware → Global (888)`
-> *"Current work (May–July 2026) = Foundation layer: stabilize before the stack above can build."* — the doc's own words. **Honored as the master sequencing law (§12).**
+> *"Current work (foundation window) = Foundation layer: stabilize before the stack above can build."* — the doc's own words. **Honored as the master sequencing law (§12).**
 
 ---
 
@@ -142,7 +142,7 @@ CrimsonOS is a **runtime that hosts composable typed parts (MCP) and wires them 
 - **Calibrated tokens.** Every token carries confidence + provenance + freshness. *Errors compound downstream* — a wrong token at part 1 poisons the chain.
 - **Fault isolation via boundary validation.** Each part validates its own inputs/outputs at the seam → the first failing input-check localizes the culprit. This is annealing, localized (troubleshoot one block, not the system).
 - **Trust boundary.** Sensitive parts (finance, bookkeeping, biometrics) stay local; never wire them to anything that egresses.
-- **First engine = the Finance Engine** (§12): single responsibility, clean token, *and it is what the operator core needs for the move.* The vertical slice.
+- **First engine = the Finance Engine** (§12): single responsibility, clean token, *and it is what the operator core needs for survival ops.* The vertical slice.
 
 ---
 
@@ -200,10 +200,10 @@ Supervisor + circuit breaker + mediator + human escalation over the agent bus. T
 
 ## §12. Sequencing & current status (the law)
 
-**Survival-first through ~Aug 1 2026.** Do not push the grand build over the move/cash until after the reset.
+**Survival-first until post-reset.** Do not push the grand build over survival/cash until after the operator reset window.
 
-1. **Now → Jul 20:** the move is the project. Substrate breathes unattended. OS work = nights/weekends, WIP=1, on the **valve** only.
-2. **~Aug 1 (income, no rent):** build the **one vertical slice** — the **Finance Engine** (serves the operator core AND is the parts-factory MVP): question → valve → gate → calibrated token → operator brief. Define "done." Ship. Demo.
+1. **Now → reset window:** survival ops are the project. Substrate breathes unattended. OS work = nights/weekends, WIP=1, on the **valve** only.
+2. **Post-reset (stabilized overhead):** build the **one vertical slice** — the **Finance Engine** (serves the operator core AND is the parts-factory MVP): question → valve → gate → calibrated token → operator brief. Define "done." Ship. Demo.
 3. **Then:** mod it with CPA + bookkeeping parts. Add the auditor. Fork to a second department. Depth before breadth.
 
 **Trigger calibration (operator's standing bug):** *persist where you'd normally pivot (finish the build), pivot where you'd normally persist (anneal the belief).* Prize = finishing without burning out — not "dominate the planet."
