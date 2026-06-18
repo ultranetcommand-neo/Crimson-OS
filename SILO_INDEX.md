@@ -32,6 +32,24 @@
 
 ---
 
+## Epistemic registers (symbolic vs objective)
+
+**Status:** **DOCUMENTATION ONLY** — not enforced in silicon on the public repo today.
+
+| Register | Meaning | Example | Typical ring |
+|---|---|---|---|
+| **`physical_state`** | Immutable measurement / textbook invariant | ¹²C: 6p/6n/6e; cos(109.5°)≈−⅓ | L2–L4 |
+| **`closed_math`** | Integer proof; no physics claim | 37/73; T₁₂=6328 | L12 |
+| **`theorem`** | Earned geometry | cos θ = ⅓; F₂↪SO(3) | L10/L12 |
+| **`lemma`** | Explicit bridge between registers | supplement −⅓ ↔ embedding +⅓ | L9→L10 |
+| **`symbolic_overlay`** | Human/cultural mapping; `root_write: false` | 666↔materialism; 777↔ascension | L12 (Operator) |
+
+**Protected truth layer (today):** `MASTER_ARCHITECTURE.md` §0 (doctrine ≠ silicon), §11 (Math vs Operator editions), ring placement in this index, and per-file `register` headers. **Not built:** `register` field in build-log JSON, filelock/DuckDB ledger, `nas_ledger_client.py` (Gemini deep-research cites this — **it is not in this repo**; `neo_tetrahedron.py` uses **simulated** `_read_nas_ledger`).
+
+**Carbon partition:** `Silo/2_Nature_Physical_World/carbon_isotopes.md` — physical counts vs partitioned overlays.
+
+---
+
 ## The 12 rings (ontology)
 
 ```
@@ -45,7 +63,7 @@ L1 Users ──► L2 Nature ──► L3 Living ──► L4 Body ──► L5 
 | Ring | Path | One-line purpose | Phase | Public artifacts |
 |---|---|---|---|---|
 | **L1** | `Silo/1_Users/` | Operator identity, preferences, escalation identity | SCAFFOLDING | README stub |
-| **L2** | `Silo/2_Nature_Physical_World/` | Physics, materials, environmental constraints | SCAFFOLDING | README stub |
+| **L2** | `Silo/2_Nature_Physical_World/` | Physics, materials, environmental constraints | PARTIAL | `carbon_isotopes.md` (`physical_state`) |
 | **L3** | `Silo/3_Living_Systems/` | Biology, ecology, living-system models | SCAFFOLDING | README stub |
 | **L4** | `Silo/4_Human_Body/` | Biometrics lane, health substrate (Doctor Crusher) | DESIGNED | README stub · see `docs/CCDE.md` §3 |
 | **L5** | `Silo/5_Kinetic_Ops/` | Crew chief / kinetic ops, hardware veto, C-141 intake | SCAFFOLDING | README · CCDE Class II/IV |
@@ -64,17 +82,20 @@ L1 Users ──► L2 Nature ──► L3 Living ──► L4 Body ──► L5 
 
 ## Gate placement (what promotes where)
 
-| Artifact | Ring | Phase | Falsification entry |
-|---|---|---|---|
-| F₂↪SO(3), cos θ = 1/3 | L10 / L12 | **CRYSTAL** (theorem) | `Geometric_Unity_Validation/` proofs |
-| JHTDB pressure-Hessian ablation | L9 | **LIQUID** | `REPRODUCE.md` → `jhtdb_ablation_controls.py` |
-| `candidate_beats_random: false` | L9 | **LIQUID** (honest negative) | `jhtdb_ablation_results.json` |
-| 37/73 gematria checksum | L12 | **CRYSTAL** (closed math) | `logos.md` · monolith TeX |
-| 112 MHz carrier | L9 | **DESIGNED** | No measurement cited |
-| Orch-OR / microtubule QC | L11 | **LIQUID** | Literature bridge only |
-| CCDE 8-class taxonomy | L5/L8–L10 | **DESIGNED** | `docs/CCDE.md` |
-| Agent org chart (Q, NEO, CMO) | Agent_Stack | **SCAFFOLDING** | Personality docs; 6 daemons do real work |
-| Live daemon health | Code/Node_0 | **PARTIAL** | Not provable from GitHub alone |
+| Artifact | Ring | Register | Phase | Falsification entry |
+|---|---|---|---|---|
+| F₂↪SO(3), cos θ = 1/3 | L10 / L12 | `theorem` | **CRYSTAL** | `Geometric_Unity_Validation/` proofs |
+| JHTDB pressure-Hessian ablation | L9 | `lemma` (empirical) | **LIQUID** | `REPRODUCE.md` → `jhtdb_ablation_controls.py` |
+| `candidate_beats_random: false` | L9 | `lemma` (empirical) | **LIQUID** (honest negative) | `jhtdb_ablation_results.json` |
+| ¹²C / ¹³C particle counts | L2 | `physical_state` | **CRYSTAL** | `carbon_isotopes.md` |
+| cos(109.5°) ≈ −⅓ (sp³ carbon) | L2 | `physical_state` | **CRYSTAL** | Textbook geometry; bridge to +⅓ = `lemma` |
+| 37/73 gematria checksum | L12 | `closed_math` | **CRYSTAL** | `logos.md` · monolith TeX |
+| 666↔materialism, 777↔ascension | L12 | `symbolic_overlay` | **OPERATOR** | `root_write: false` · `carbon_isotopes.md` § overlays |
+| 112 MHz carrier | L9 | `lemma` (hypothesis) | **DESIGNED** | No measurement cited |
+| Orch-OR / microtubule QC | L11 | `lemma` | **LIQUID** | Literature bridge only |
+| CCDE 8-class taxonomy | L5/L8–L10 | `symbolic_overlay` (ops) | **DESIGNED** | `docs/CCDE.md` |
+| Agent org chart (Q, NEO, CMO) | Agent_Stack | — | **SCAFFOLDING** | Personality docs; 6 daemons do real work |
+| Live daemon health | Code/Node_0 | — | **PARTIAL** | Not provable from GitHub alone |
 
 ---
 
@@ -128,4 +149,4 @@ Task: Audit Crimson OS using SILO_INDEX.md only.
 | Math edition | `Geometric_Unity_Validation/` (worldview-neutral runnable core) |
 | Operator edition | `Sola_Scriptura_Systematic_Theology.md` (optional lens — same gate) |
 
-*Silo index v1.0 — public aperture only. Operator ratifies → promote to CRYSTAL.*
+*Silo index v1.1 — public aperture only. Operator ratifies → promote to CRYSTAL.*
