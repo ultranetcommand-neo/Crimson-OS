@@ -1,11 +1,12 @@
 {
     "system_name":  "Crimson OS",
     "version":  "2.0.0",
-    "root_path":  "Z:\\COS",
+    "root_path":  "Y:\\COS",
+    "legacy_root_paths":  ["Z:\\COS", "C:\\Users\\crims"],
     "architecture_nodes":  {
                                "agent_stack":  {
                                                    "path":  "./Agent_Stack",
-                                                   "communication_bus":  "NGINX hosted Agent_Bridge at localhost:8094",
+                                                   "communication_bus":  "NGINX hosted Agent_Bridge at localhost:8092",
                                                    "role":  "execution",
                                                    "description":  "Contains the core agent hierarchy and inter-agent bridge protocols."
                                                },
@@ -32,7 +33,8 @@
                                                                                   "active_blockers",
                                                                                   "daily_schedule"
                                                                               ],
-                                                       "cockpit_api_endpoint":  "http://127.0.0.1:8093/status"
+                                                       "cockpit_api_endpoint":  "http://127.0.0.1:8093/status",
+                                                       "port_rationale":  "8092 static intranet (Agent_Bridge) · 8093 cockpit API (Node 1 Q) — ratified 2026-06-18"
                                                    }
                                 }
 }

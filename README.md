@@ -14,7 +14,9 @@ The knowledge repository and structured ontology. Divided into levels mapping fr
 
 **External reviewers:** start with [`SILO_INDEX.md`](SILO_INDEX.md) (public aperture — ring map, phase tags, falsification entry points). Reproduce the physics gate via [`Geometric_Unity_Validation/REPRODUCE.md`](Geometric_Unity_Validation/REPRODUCE.md).
 
-**Logos Invariant map:** [`docs/images/logos_invariant_map.jpg`](docs/images/logos_invariant_map.jpg) · [NotebookLM export](docs/images/notebooklm_logos_invariant.png)
+**Logos Invariant map:** [`docs/images/logos_invariant_map.jpg`](docs/images/logos_invariant_map.jpg)
+
+**Theorem anchor:** [`Geometric_Unity_Validation/proof.md`](Geometric_Unity_Validation/proof.md) (CRYSTAL — separate from published negative JHTDB lemmas)
 
 ## Operations: The "First Ping"
 To ensure the system never operates on stale data, Crimson OS uses an Intranet scraping protocol called the **First Ping**.
@@ -33,10 +35,18 @@ The Agent_Bridge is not a software API router. It is a literal physical memory b
 ### 1. Initializing the Intranet
 To run the Sovereign Architecture locally, you **must** spin up an NGINX server to host the `Agent_Bridge` directory on `127.0.0.1:8092 \(static intranet; cockpit API :8093\)`. This intranet serves as the shared physical memory for the entire Swarm.
 
-If you have Docker installed, you can quickly spin this up from the root directory:
-```bash
-docker run -d -p 8092:80 -v ${PWD}/Agent_Bridge:/usr/share/nginx/html nginx
+**Windows (recommended):**
+```powershell
+.\scripts\startup.ps1
+.\scripts\health_check.ps1
 ```
+
+**Manual Docker:**
+```bash
+docker run -d --name crimson-intranet -p 8092:80 -v ${PWD}/Agent_Bridge:/usr/share/nginx/html:ro nginx
+```
+
+Copy `.env.example` → `.env` for local paths. Ports: **8092** intranet · **8093** cockpit API.
 
 ### 2. Communicating with Agents
 To interface and communicate with the agents, **use an AI IDE like Open Code, Antigravity, or Claude Code**. 

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ultranetcommand-neo/Crimson-OS/schemas/build_log_entry.schema.json",
+  "title": "Crimson OS Build Log Entry",
+  "description": "Append-only epistemic gate record. Single writer (cockpit POST /build) in production; local file append for public stub.",
+  "type": "object",
+  "required": [
+    "entry_id",
+    "timestamp_utc",
+    "artifact_path",
+    "ring",
+    "register",
+    "phase",
+    "gate_action"
+  ],
+  "properties": {
+    "entry_id": {
+      "type": "string",
+      "minLength": 8
+    },
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "artifact_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ring": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12
+    },
+    "register": {
+      "type": "string",
+      "enum": [
+        "physical_state",
+        "closed_math",
+        "theorem",
+        "lemma",
+        "symbolic_overlay"
+      ]
+    },
+    "phase": {
+      "type": "string",
+      "enum": [
+        "GAS",
+        "LIQUID",
+        "CRYSTAL",
+        "RETRACTED"
+      ]
+    },
+    "gate_action": {
+      "type": "string",
+      "enum": [
+        "INTAKE",
+        "PROMOTE_LIQUID",
+        "PROMOTE_CRYSTAL",
+        "DEMOTE",
+        "FALSIFY",
+        "RETRACT"
+      ]
+    },
+    "falsification_entry": {
+      "type": "string",
+      "description": "Path or URL to reproduction script / dataset verdict"
+    },
+    "root_write": {
+      "type": "boolean",
+      "default": false,
+      "description": "Must be false for symbolic_overlay; true only for physical_state append"
+    },
+    "taxonomy_class": {
+      "type": "string",
+      "description": "Optional CCDE failure class I–VIII (docs/CCDE.md)"
+    },
+    "operator_ratified": {
+      "type": "boolean",
+      "default": false
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

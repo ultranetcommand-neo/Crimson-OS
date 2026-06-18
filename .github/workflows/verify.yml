@@ -1,0 +1,34 @@
+name: Verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dev dependencies
+        run: pip install pytest
+
+      - name: Verify research artifacts
+        run: python scripts/verify_research_artifacts.py
+
+      - name: Epistemic gate tests
+        run: pytest tests/ -q
+
+      - name: Python syntax check
+        run: |
+          python -m compileall -q Code Geometric_Unity_Validation scripts
+
+      - name: Gate smoke (stdlib stub)
+        run: python Code/epistemic_gate/gate.py

@@ -23,3 +23,7 @@ Desktop.ini
 
 # Logs
 *.log
+build_log.jsonl
+
+# Research cache (regenerate via REPRODUCE.md)
+Geometric_Unity_Validation/jhtdb_metrics_cache.npz

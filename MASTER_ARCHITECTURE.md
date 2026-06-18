@@ -31,7 +31,7 @@ This document obeys, and enforces, five rules taken from CrimsonOS's own archite
 | Root path | **`Y:\COS\`** | Legacy `Z:` / `C:\UsersUSER]` are mounts of the same NAS estate. |
 | Silo scheme | **12-ring ontology** (`1_Users` … `12_Logos_YHWH`) | Supersedes the older 13-layer (`1_Raw_Earth_Dirt`…`13_User_Input_Required`). Mapping in §5. |
 | Layer 13 (`User_Input_Required`) | **Folded into the escalation protocol** (§8), not a ring. | "Fail closed → human" is now a *protocol*, not a folder. |
-| Intranet port | **UNRESOLVED — flag.** manifest says `8094`; ARCHITECTURE.md says `8092`; cockpit API is `8093`. | Pick one before wiring. |
+| Intranet port | **`8092`** static intranet (Agent_Bridge NGINX) · **`8093`** cockpit API (Node 1 Q) | Ratified 2026-06-18 in `system_manifest.json`. Legacy `8094` reference retired. |
 | Node numbering | Canonical = `Code/` scheme: Node 0 N.E.O. · 1 Q · 2 [EDGE_ROUTER_NODE] · 3 Mac · 5 Pixel · NAS ULTRANET · MUSIC. | Older strip-plan numbering (Node1/2/3) is **deprecated** — do not reuse. |
 
 ---
@@ -212,7 +212,7 @@ Supervisor + circuit breaker + mediator + human escalation over the agent bus. T
 ---
 
 ## §13. Open items to ratify
-- [ ] Intranet port: pick 8092 / 8093 / 8094.
+- [x] Intranet port: **8092** intranet · **8093** cockpit (2026-06-18).
 - [ ] Archive (don't delete) the superseded architecture docs + the 17 stub agents → `13_Lost_and_Found` / cold store.
 - [ ] Confirm 12-ring as canonical; retire the 13-layer doc to legacy.
 - [ ] Ratify this file (operator) → it becomes Crystal; until then it's the reconciliation candidate.

@@ -44,7 +44,7 @@
 | **`lemma`** | Explicit bridge between registers | supplement −⅓ ↔ embedding +⅓ | L9→L10 |
 | **`symbolic_overlay`** | Human/cultural mapping; `root_write: false` | 666↔materialism; 777↔ascension | L12 (Operator) |
 
-**Protected truth layer (today):** `MASTER_ARCHITECTURE.md` §0 (doctrine ≠ silicon), §11 (Math vs Operator editions), ring placement in this index, and per-file `register` headers. **Not built:** `register` field in build-log JSON, filelock/DuckDB ledger, `nas_ledger_client.py` (Gemini deep-research cites this — **it is not in this repo**; `neo_tetrahedron.py` uses **simulated** `_read_nas_ledger`).
+**Protected truth layer (today):** `MASTER_ARCHITECTURE.md` §0 (doctrine ≠ silicon), §11 (Math vs Operator editions), ring placement in this index, per-file `register` headers, `schemas/build_log_entry.schema.json`, and `Code/epistemic_gate/gate.py` (append-only stub). **Not built:** single-writer filelock/DuckDB ledger, cockpit `POST /build`, `nas_ledger_client.py` (Gemini cites this — **not in repo**; `neo_tetrahedron.py` uses **simulated** `_read_nas_ledger`).
 
 **Carbon partition:** `Silo/2_Nature_Physical_World/carbon_isotopes.md` — physical counts vs partitioned overlays.
 
@@ -84,7 +84,7 @@ L1 Users ──► L2 Nature ──► L3 Living ──► L4 Body ──► L5 
 
 | Artifact | Ring | Register | Phase | Falsification entry |
 |---|---|---|---|---|
-| F₂↪SO(3), cos θ = 1/3 | L10 / L12 | `theorem` | **CRYSTAL** | `Geometric_Unity_Validation/` proofs |
+| F₂↪SO(3), cos θ = 1/3 | L10 / L12 | `theorem` | **CRYSTAL** | `Geometric_Unity_Validation/proof.md` · monolith TeX |
 | JHTDB pressure-Hessian ablation | L9 | `lemma` (empirical) | **LIQUID** | `REPRODUCE.md` → `jhtdb_ablation_controls.py` |
 | `candidate_beats_random: false` | L9 | `lemma` (empirical) | **LIQUID** (honest negative) | `jhtdb_ablation_results.json` |
 | ¹²C / ¹³C particle counts | L2 | `physical_state` | **CRYSTAL** | `carbon_isotopes.md` |
@@ -104,7 +104,10 @@ L1 Users ──► L2 Nature ──► L3 Living ──► L4 Body ──► L5 
 | File | Why read it |
 |---|---|
 | `MASTER_ARCHITECTURE.md` | Reconciled master — phases, gate, nodes, sequencing law |
+| `Geometric_Unity_Validation/proof.md` | CRYSTAL theorem anchor (separate from LIQUID lemmas) |
 | `Geometric_Unity_Validation/REPRODUCE.md` | Blind reproduction; adversarial instructions |
+| `Code/epistemic_gate/gate.py` | Register-enforced gate stub (append-only JSONL) |
+| `scripts/startup.ps1` · `scripts/health_check.ps1` | Local intranet bootstrap + verifier |
 | `Geometric_Unity_Validation/jhtdb_ablation_results.json` | Published verdict — **includes failures** |
 | `docs/CCDE.md` | Crew Chief Diagnostic Engine — bifurcated engineering + provenance |
 | `GLOSSARY.md` | Term definitions (RGI, gate, nodes) |
@@ -149,4 +152,4 @@ Task: Audit Crimson OS using SILO_INDEX.md only.
 | Math edition | `Geometric_Unity_Validation/` (worldview-neutral runnable core) |
 | Operator edition | `Sola_Scriptura_Systematic_Theology.md` (optional lens — same gate) |
 
-*Silo index v1.1 — public aperture only. Operator ratifies → promote to CRYSTAL.*
+*Silo index v1.2 — public aperture only. Operator ratifies → promote to CRYSTAL.*

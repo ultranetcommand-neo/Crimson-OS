@@ -6,6 +6,8 @@
 
 This document is the adversarial reproduction path. Consensus (including LLM praise) does not count. **Data closes the gate.**
 
+**Theorem anchor (CRYSTAL, no network):** [`proof.md`](proof.md) — separates earned geometry from empirical lemmas tested here.
+
 ---
 
 ## Prerequisites
