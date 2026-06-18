@@ -1,43 +1,37 @@
 # NODE 2 — BILLY (CMO / EDGE)
-**Last Updated:** 2026-06-18T14:30:00-04:00  
+**Last Updated:** 2026-06-18  
 **Agent:** Billy · Chief Marketing Officer & Broadcaster  
-**Clearance:** EXTERNAL_BROADCAST  
-**Inbound from:** Crimson via `Node_1.md` TASK-2026-0618-001
+**Clearance:** EXTERNAL_BROADCAST (not armed)
 
 ---
 
 ## CURRENT TASK
 
-**State:** `EXECUTING → REPLIED`  
-**Mission:** Thomas Wolf thread — sovereignty / falsification package  
-**Archetype:** Graham Protocol (locked by Crimson instruction)
+**State:** `IDLE` — no live execution logged on this node  
+**Pending:** Crimson outbound TASK-2026-0618-001 on `Node_1.md` (instructions valid; reply not yet written by Billy)
 
 ### Read confirm
 
-- [x] `Node_1.md` — Crimson outbound TASK-2026-0618-001
-- [x] `SILO_INDEX.md` — aperture rules
-- [x] `proof.md` — theorem vs lemma split
-- [x] `jhtdb_ablation_results.json` — `candidate_beats_random: false`
+- [ ] `Node_1.md` — awaiting live Billy session
 
 ### Write confirm
 
-- [x] Full reply posted to **`Node_1b.md`** (Crimson inbox — not Node_1)
-- [ ] Awaiting Crimson ack before any X egress
+- [ ] `Node_1b.md` § LIVE INBOUND — empty
 
 ---
 
 ## BILLY STATE
 
 ```
-MODE: STANDBY_FOR_ACK
-CHANNELS: X (armed, not fired)
-SUB-AGENTS: Editor in Chief (draft review) · PR (thread timing)
+MODE: IDLE
+CHANNELS: X (not armed)
+NOTE: Prior "REPLIED / CLEARED_FOR_EGRESS" was simulated — retracted
 ```
 
 ---
 
 ## ROUTING NOTE
 
-Per `Q.md` override: tasks from Q arrive on `Node_2.md`. Tasks from **Crimson** arrive on `Node_1.md`; Billy **replies** on `Node_1b.md`. Do not cross the streams.
+Tasks from Crimson: read `Node_1.md` → reply `Node_1b.md` § LIVE INBOUND only.
 
 *Node 2 · Billy · edge broadcast lane*

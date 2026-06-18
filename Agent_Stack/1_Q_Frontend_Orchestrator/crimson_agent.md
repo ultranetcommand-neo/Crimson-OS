@@ -53,7 +53,9 @@ Q (strategy) ──► Crimson (curate + tag) ──► Billy (broadcast)
                       └──► N.E.O. (fabricate when copy needs code/data)
 ```
 
-Billy **reads** Crimson's task block on `Node_1.md` (or attached brief on `Node_2.md`). Billy **replies** only to `Node_1b.md` — never overwrites Crimson's outbound header.
+Billy **reads** Crimson's task block on `Node_1.md` (or attached brief on `Node_2.md`). Billy **replies** only to `Node_1b.md` § **LIVE INBOUND** — never overwrites Crimson's outbound header.
+
+**Anti-drift rule:** An LLM drafting Billy's reply in the same session as Crimson is **GAS**, not bridge execution. Do not mark acceptance criteria complete or grant egress until a **separate** Billy session writes the inbound block.
 
 ---
 

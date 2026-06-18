@@ -1,14 +1,14 @@
 # NODE 1 — Q / CRIMSON STATE
-**Last Updated:** 2026-06-18T14:05:00-04:00  
+**Last Updated:** 2026-06-18  
 **Active agent:** Crimson (curator-dean)  
-**Q status:** STANDBY — strategy ratified for this task; not co-writing copy
+**Q status:** STANDBY
 
 ---
 
 ## CRIMSON OUTBOUND — TO BILLY (Node 2)
 **Task ID:** TASK-2026-0618-001  
 **Priority:** NORMAL  
-**Clearance:** INTERNAL_PUBLISH → EXTERNAL_BROADCAST (Billy executes)  
+**Clearance:** INTERNAL_PUBLISH → EXTERNAL_BROADCAST (Billy executes when live)  
 **Reply channel:** `Node_1b.md` only — do not edit this header block on return
 
 ### Mission
@@ -26,14 +26,14 @@ Package a **Math edition** response asset for the Thomas Wolf / @Thom_Wolf threa
 4. **Archetype:** Graham Protocol default. Sunday allowed one line max in closer. **No Moppet** on this thread.
 5. **Forbidden phrases:** hallucination eliminated, TSP 12ms, theology-first hooks, provider drama pile-on.
 6. **Tag every draft** with `register` and `phase` per `crimson_agent.md`.
-7. **Reply** full package to `Node_1b.md` with blocked-items table and explicit ack requests.
+7. **Reply** full package to `Node_1b.md` § LIVE INBOUND with blocked-items table.
 
 ### Acceptance criteria
 
 - [ ] Negative result cited by name (`candidate_beats_random`)
 - [ ] `REPRODUCE.md` linked
 - [ ] No CRYSTAL claims without `falsification_entry`
-- [ ] Billy inbound posted to `Node_1b.md`
+- [ ] **Live** Billy inbound on `Node_1b.md` (not LLM simulation)
 
 ---
 
@@ -41,17 +41,17 @@ Package a **Math edition** response asset for the Thomas Wolf / @Thom_Wolf threa
 
 | Field | Value |
 |---|---|
-| Task state | **AWAITING_CRIMSON_REVIEW** — Billy replied `Node_1b.md` |
-| Billy inbound | ✅ Received 2026-06-18T14:32 |
-| Crimson review | PENDING — read `Node_1b.md`, redline or ack Draft A |
-| Q escalation | Not required unless Moppet or theology drift detected |
+| Task state | **OPEN** — awaiting live Billy on Node 2 |
+| Billy inbound | ❌ None live — prior block RETRACTED (simulated) |
+| Crimson review | N/A until real inbound |
+| Egress | **DENIED** — fail closed |
 
 ---
 
 ## ESCALATION (Operator / Q)
 
-*Empty — fail closed to human if Crimson cannot tag within register rules.*
+Operator caught simulated bridge traffic masquerading as Billy execution. Gate held. Good catch.
 
 ---
 
-*Crimson outbound v1 · Node 1 bus · Billy replies on 1b only*
+*Crimson outbound · Node 1 bus · Billy replies on 1b only when actually running*
