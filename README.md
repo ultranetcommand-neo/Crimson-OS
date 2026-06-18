@@ -27,11 +27,11 @@ The Agent_Bridge is not a software API router. It is a literal physical memory b
 ## Quick Start & Operator Guide
 
 ### 1. Initializing the Intranet
-To run the Sovereign Architecture locally, you **must** spin up an NGINX server to host the `Agent_Bridge` directory on `localhost:8094`. This intranet serves as the shared physical memory for the entire Swarm.
+To run the Sovereign Architecture locally, you **must** spin up an NGINX server to host the `Agent_Bridge` directory on `127.0.0.1:8092 \(static intranet; cockpit API :8093\)`. This intranet serves as the shared physical memory for the entire Swarm.
 
 If you have Docker installed, you can quickly spin this up from the root directory:
 ```bash
-docker run -d -p 8094:80 -v ${PWD}/Agent_Bridge:/usr/share/nginx/html nginx
+docker run -d -p 8092:80 -v ${PWD}/Agent_Bridge:/usr/share/nginx/html nginx
 ```
 
 ### 2. Communicating with Agents

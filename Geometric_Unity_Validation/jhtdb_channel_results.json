@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-06-14T21:37:35.009019+00:00",
+  "dataset": "channel",
+  "n_points_sampled": 500,
+  "n_points_high_enstrophy": 16,
+  "global_stats": {
+    "mean_cos2_phi1": 0.12936944211355955,
+    "mean_cos2_phi2": 0.7477711570521545,
+    "mean_cos2_phi3": 0.12285940083428602,
+    "isotropic_baseline": 0.333333
+  },
+  "high_enstrophy_stats": {
+    "threshold_multiplier": 3.0,
+    "mean_cos2_phi1": 0.13215566552121155,
+    "mean_cos2_phi2": 0.7962497328488358,
+    "mean_cos2_phi3": 0.0715946016299526,
+    "hausdorff_bound": 0.111111
+  }
+}
