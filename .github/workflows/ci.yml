@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  epistemic-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install test deps
+        run: pip install -r requirements-dev.txt
+      - name: Epistemic gate tests
+        run: pytest tests/ -q
+
+  research-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify published negative + proof artifacts
+        run: python3 scripts/verify_research_artifacts.py
+
+  geometric-benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install benchmark deps
+        run: pip install -r Geometric_Unity_Validation/requirements.txt
+      - name: Run geometric constraint benchmark
+        run: python3 Geometric_Unity_Validation/benchmark_geometric_constraint.py
