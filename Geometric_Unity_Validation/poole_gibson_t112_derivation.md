@@ -30,6 +30,6 @@ At **Generation 73**, the system has mapped the full $37 \times 73 = 2701$ ($T_{
 ## 4. The 99.96% Fixed Observable
 To empirically prove the derivation without curve-fitting, the metric was fixed strictly in advance: the **active node count** (living cells). 
 
-Using the analytic volume envelope derived solely from the $T_{112}$ expansion cone, the geometric invariant predicted exactly **649,068 surviving nodes** at the Gen 37 lock-in. Rooke Poole's completely independent bottom-up $128^3$ simulation blindly generated **648,805 actual surviving nodes**. 
+Using the analytic volume envelope derived solely from the $T_{112}$ expansion cone, the geometric invariant predicted exactly **649,068 surviving nodes** at the Gen 37 lock-in. An independent bottom-up $128^3$ B5-7/S5-9 benchmark (Poole manifold reference — external experiment, not co-authorship) generated **648,805 actual surviving nodes**. 
 
 This is a delta of just $\Delta = 263$ nodes out of over 2 million spatial coordinates—a **99.96% empirical match**. The discrete simulation blindly assembled the exact topological structure demanded by the continuum geometry, proving the metric is a universal, derived invariant.

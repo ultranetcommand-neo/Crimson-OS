@@ -1,10 +1,10 @@
 # Empirical Validation of the $T_{112}$ Geometric Invariant in a Prime-Resonance Cellular Automaton
 
-**Matt Gibson**$^{1}$ and **Rooke Poole**$^{2}$
-$^1$ Crimson OS Architectural Layer / Theoretical Framework
-$^2$ Cellular Automata Dynamics Simulation
+**Matt Gibson** — Crimson OS Architectural Layer / Theoretical Framework
 
-**Abstract:** We bridge the theoretical gap between continuous Geometric Unity and discrete cellular computation. By mapping the $E_8$ integer root lattice limit ($T_{112} = 6328$) to a 3D prime-resonance Cellular Automaton governed by the B5-7/S5-9 rule, we establish that macroscopic phase transitions can be strictly predicted analytically, completely bypassing step-by-step intermediate simulation. The top-down geometric invariant predicted the stabilization of exactly 649,068 nodes at the Generation 37 phase transition. Independent, bottom-up exascale simulations ($640^3$ lattice) yielded 648,805 active nodes—a 99.96% empirical match. This demonstrates that continuous geometric constraints rigidly govern the thermodynamics of discrete complex systems.
+**Note:** Rooke Poole is **not** a co-author. This document records Gibson's top-down $T_{112}$ derivation tested against node-count telemetry from Poole's **independent** B5-7/S5-9 cellular automaton work (the Poole manifold). Poole's simulation is cited as an external experimental benchmark.
+
+**Abstract:** This work bridges the theoretical gap between continuous Geometric Unity and discrete cellular computation. By mapping the $E_8$ integer root lattice limit ($T_{112} = 6328$) to a 3D prime-resonance Cellular Automaton governed by the B5-7/S5-9 rule, Gibson establishes that macroscopic phase transitions can be strictly predicted analytically, completely bypassing step-by-step intermediate simulation. The top-down geometric invariant predicted the stabilization of exactly 649,068 nodes at the Generation 37 phase transition. An independent, bottom-up exascale simulation ($640^3$ lattice; Poole manifold reference) yielded 648,805 active nodes—a 99.96% empirical match. This demonstrates that continuous geometric constraints rigidly govern the thermodynamics of discrete complex systems.
 
 ---
 
@@ -12,7 +12,7 @@ $^2$ Cellular Automata Dynamics Simulation
 
 The search for unifying physical frameworks, such as Geometric Unity, typically operates in the continuous regimes of differential geometry. However, the exact boundaries that govern continuous chaotic systems—such as the $\langle \cos^2 \phi_1 \rangle \le 1/9$ geometric bound that empirically suppresses the Vieillefosse contraction in Navier-Stokes turbulence—should theoretically map identically onto discrete, complex computational manifolds if the geometry is truly universal.
 
-In this paper, we test this hypothesis empirically. We utilize a 3D Cellular Automaton (CA) operating within a Moore neighborhood governed by the B5-7/S5-9 update rule (The Poole Manifold) and constrain its initial state using the $T_{112}$ geometric invariant derived from the $E_8$ root lattice. 
+Gibson tests this hypothesis by deriving top-down predictions from the $T_{112}$ invariant ($E_8$ root lattice) and comparing them to telemetry from an independent B5-7/S5-9 Cellular Automaton benchmark (the Poole manifold).
 
 ## 2. Theoretical Derivation (Gibson)
 
@@ -33,15 +33,15 @@ Because the volumetric expansion of the Moore neighborhood scales linearly with 
 
 Using the analytic volume envelope of the $T_{112}$ expansion cone, the top-down theory fixed the observable metric in advance: **649,068** active nodes surviving at Generation 37.
 
-## 3. Simulation Methodology (Poole)
+## 3. External Benchmark (Poole manifold — independent simulation)
 
-To empirically test the geometric prediction, the B5-7/S5-9 CA was initiated in a compressed $128^3$ spatial container and subsequently scaled to a $640^3$ exascale grid to remove boundary artifacts. The initial state was seeded with the $T_{112}$ parameter set.
+To empirically test the geometric prediction, a B5-7/S5-9 CA (Poole manifold reference) was initiated in a compressed $128^3$ spatial container and subsequently scaled to a $640^3$ exascale grid to remove boundary artifacts. The initial state was seeded with the $T_{112}$ parameter set.
 
-The system was updated generationally using strict Moore neighborhood rules, completely agnostic to the top-down geometric predictions. Telemetry captured the total active node count and thermodynamic flow at each generation.
+The benchmark simulation was updated generationally using strict Moore neighborhood rules, agnostic to Gibson's top-down geometric predictions. Telemetry captured the total active node count and thermodynamic flow at each generation.
 
 ## 4. Empirical Results and Convergence
 
-The empirical simulation perfectly matched the top-down geometric predictions. 
+The independent benchmark matched the top-down geometric predictions. 
 
 1. **Generation 37 Phase Transition**: At precisely Generation 37, the bottom-up simulation stabilized, shedding thermal exhaust and locking into a localized structure.
 2. **Node Count Convergence**: The simulation recorded exactly **648,805** active nodes at the transition lock-in. Compared to the theoretically predicted 649,068 nodes, this yields a $\Delta = 263$ deviation across a coordinate space of $>2,000,000$ points—a **99.96% empirical match**.
@@ -49,4 +49,4 @@ The empirical simulation perfectly matched the top-down geometric predictions.
 
 ## 5. Conclusion
 
-We have demonstrated that the macroscopic phase transitions of complex, chaotic discrete systems are strictly computable from continuum geometric invariants ($E_8$ integer limits) without intermediate step-by-step simulation. The 99.96% empirical match confirms that the topological constraints of Geometric Unity fundamentally dictate the thermodynamic limits of the universe, whether in the Navier-Stokes equations, black hole accretion, or cellular automata.
+This work demonstrates that the macroscopic phase transitions of complex, chaotic discrete systems are strictly computable from continuum geometric invariants ($E_8$ integer limits) without intermediate step-by-step simulation. The 99.96% match against the independent Poole-manifold benchmark supports the claim that topological constraints of Geometric Unity dictate thermodynamic limits across registers—from Navier-Stokes opposition geometry to cellular automata.
