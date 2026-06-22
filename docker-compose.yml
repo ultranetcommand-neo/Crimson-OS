@@ -1,0 +1,13 @@
+# Crimson OS — local Agent_Bridge intranet (Linux/macOS)
+# Usage: docker compose up -d
+# Health: ./scripts/health_check.sh
+
+services:
+  intranet:
+    image: nginx:alpine
+    container_name: crimson-intranet
+    ports:
+      - "8092:80"
+    volumes:
+      - ./Agent_Bridge:/usr/share/nginx/html:ro
+    restart: unless-stopped
