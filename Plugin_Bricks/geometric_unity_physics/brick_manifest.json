@@ -1,0 +1,54 @@
+{
+  "brick_id": "geometric_unity_physics",
+  "name": "Geometric Unity Physics",
+  "version": "1.0.0",
+  "tier": "developer",
+  "phase": "LIVE",
+  "license": "Apache-2.0",
+  "description": "Phase-labeled MCP read tools for Geometric Unity physics — CRYSTAL theorem, LIQUID lemmas, negative JHTDB verdict. Repo-backed; HF mirror optional.",
+  "author": "Matt Gibson / Crimson Symphony Media",
+  "corpus_root": "../../Geometric_Unity_Validation",
+  "hf_mirror": "https://huggingface.co/datasets/UltranetCommand/geometric-unity-physics",
+  "transport": "stdio",
+  "executable": {
+    "command": "python3",
+    "args": ["server.py"],
+    "cwd_relative": "."
+  },
+  "env": {
+    "GEOMETRIC_UNITY_CORPUS": "Optional override path to Geometric_Unity_Validation/"
+  },
+  "tools": [
+    {
+      "name": "get_proof_anchor",
+      "phase": "CRYSTAL",
+      "summary": "Theorem: cos θ = ⅓"
+    },
+    {
+      "name": "get_phase_register",
+      "phase": "META",
+      "summary": "Theorem vs lemma vs NEGATIVE table"
+    },
+    {
+      "name": "get_jhtdb_verdict",
+      "phase": "LIQUID",
+      "summary": "Parsed JHTDB ablation JSON including negative result"
+    },
+    {
+      "name": "list_physics_corpus",
+      "phase": "META",
+      "summary": "Index of readable physics docs"
+    },
+    {
+      "name": "read_physics_doc",
+      "phase": "VARIES",
+      "summary": "Read monolith, proof, REPRODUCE, derivations by doc_id"
+    }
+  ],
+  "agents": ["2_N.E.O_Backend_Orchestrator", "1_Q_Frontend_Orchestrator"],
+  "not_in_boot_path": ["run_jhtdb_ablation"],
+  "attribution": {
+    "author": "Matt Gibson",
+    "poole_manifold": "External B5-7/S5-9 CA benchmark — not co-authorship"
+  }
+}
