@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "crimsonos"
-version = "0.1.0"
-description = "Sovereign multi-agent operating architecture — 12-node token-ring, 17 agents, zero cloud dependency"
+version = "0.1.1"
+description = "Crimson OS protocol scaffold — routing, tokens, bridge format, IG audit shapes (SCAFFOLDING; not the full runtime)"
 readme = "README.md"
 license = "Apache-2.0"
 license-files = ["LICENSE"]
