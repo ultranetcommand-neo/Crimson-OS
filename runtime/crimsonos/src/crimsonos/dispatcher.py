@@ -1,8 +1,8 @@
 """
-Crimson OS Dynamic Multi-Track Dispatcher
+Crimson OS Dynamic Multi-Track Dispatcher (SCAFFOLDING)
 
-The Dispatcher is the central routing layer. It receives all inputs and sorts
-them by density across three tracks before assigning to agents.
+Target routing spec from MASTER_ARCHITECTURE §4. Classifies input across three
+tracks and returns string routing targets — not live agent execution.
 
 Tracks:
     A — Kinetic   (L01-L03): Physical / logistics / real-world action

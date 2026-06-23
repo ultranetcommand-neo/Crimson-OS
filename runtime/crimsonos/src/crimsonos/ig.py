@@ -1,13 +1,8 @@
 """
-Crimson OS Inspector General (IG) Protocol
+Crimson OS Inspector General (IG) Protocol (SCAFFOLDING)
 
-The IG is an independent auditor that operates outside the Council chain of command.
-It cannot be overridden by any agent, including Q or NEO.
-Its verified score is the terminal authority on agent output quality.
-
-In military history, the Inspector General is charged with detecting waste, fraud,
-and misconduct, operating independently to preserve objectivity.
-Crimson OS implements this discipline algorithmically.
+Heuristic audit scaffold. Full Adversarial IG bus is DESIGNED per
+MASTER_ARCHITECTURE §8 — several axes here require operator input (MANUAL phase).
 """
 
 from __future__ import annotations
