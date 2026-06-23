@@ -1,12 +1,8 @@
 """
-Crimson OS Bridge Protocol
+Crimson OS Bridge Protocol (SCAFFOLDING)
 
-Bridge files are the inter-agent communication standard.
-Every agent state change, task completion, or escalation is written
-as a Bridge file and aggregated by the Scribe (Node 09).
-
-Natural language prompting between agents is prohibited.
-All inter-agent communication occurs through Bridge files.
+YAML bridge file read/write for the target Agent_Bridge ledger (DESIGNED/PARTIAL
+in the full OS). This module does not connect to NAS or live daemons.
 """
 
 from __future__ import annotations

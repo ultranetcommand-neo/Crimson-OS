@@ -1,8 +1,8 @@
 """
-Crimson OS Executor
+Crimson OS Executor (PARTIAL)
 
-Takes a DispatchResult, builds the appropriate agent system prompt,
-and calls the Ollama inference endpoint on Node 1 NEO.
+Optional Ollama HTTP helper with eight prompt personas. Demo path only —
+not the N.E.O. runtime or Council chain from MASTER_ARCHITECTURE §4.
 """
 
 from __future__ import annotations

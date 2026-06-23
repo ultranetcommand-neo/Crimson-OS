@@ -1,14 +1,14 @@
 """
-Crimson OS — Sovereign Multi-Agent Operating Architecture
+Crimson OS — Protocol Scaffold (Python)
 
-A 12-node token-ring network coordinating 17 autonomous agents
-on consumer hardware with zero cloud dependency.
+Phase: SCAFFOLDING. Typed stubs for routing, tokens, bridge files, and IG audit
+shapes. Not the live multi-agent runtime — see MASTER_ARCHITECTURE in the monorepo.
 
 Architect: Matt Gibson / Crimson Symphony Media
 License: Apache 2.0
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __author__ = "Matt Gibson"
 __email__ = "crimson@crimsonsymphonymedia.com"
 

@@ -1,5 +1,5 @@
 """
-Crimson OS CLI entry point.
+Crimson OS CLI entry point (SCAFFOLDING demo).
 """
 
 import sys
@@ -17,7 +17,7 @@ BANNER = """
   ╚██████╗██║  ██║██║██║ ╚═╝ ██║███████║╚██████╔╝██║ ╚████║    ╚██████╔╝███████║
    ╚═════╝╚═╝  ╚═╝╚═╝╚═╝     ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝     ╚═════╝ ╚══════╝
 
-  Sovereign Multi-Agent Operating Architecture
+  Protocol Scaffold — SCAFFOLDING
   Crimson Symphony Media · Las Vegas, NV · 2026
 """
 
@@ -53,7 +53,7 @@ def _print_help():
     table = Table(show_header=True, header_style="bold")
     table.add_column("Command")
     table.add_column("Description")
-    table.add_row("status", "Show node and agent status across the ring")
+    table.add_row("status", "Show scaffold routing table (target topology)")
     table.add_row("dispatch", "Route a task through the dispatcher interactively")
     table.add_row("ig", "Run an IG audit on agent output")
     table.add_row("version", "Show version")
