@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Crimson OS Intranet — First Ping</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #0a0a0a; color: #e8e8e8; margin: 2rem; }
+    h1 { color: #c41e3a; }
+    a { color: #d4af37; }
+    .status { margin: 1rem 0; padding: 1rem; background: #111; border: 1px solid #333; }
+    pre { overflow: auto; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <h1>Crimson OS Intranet</h1>
+  <p>Agent_Bridge memory bus · port <strong>8092</strong> · cockpit <strong>8093</strong></p>
+  <h2>Bridge nodes</h2>
+  <ul>
+    <li><a href="Node_0.md">Node 0 — N.E.O.</a></li>
+    <li><a href="Node_1.md">Node 1 — Q</a></li>
+    <li><a href="Node_1b.md">Node 1b — Crimson Inbox</a></li>
+    <li><a href="Node_2.md">Node 2 — CMO Edge</a></li>
+    <li><a href="Node_3.md">Node 3</a></li>
+    <li><a href="Node_4.md">Node 4</a></li>
+    <li><a href="Node_5.md">Node 5</a></li>
+    <li><a href="Node_6.md">Node 6 — Money</a></li>
+    <li><a href="Node_7.md">Node 7</a></li>
+    <li><a href="Node_8.md">Node 8</a></li>
+    <li><a href="Node_9.md">Node 9</a></li>
+    <li><a href="Node_10.md">Node 10</a></li>
+    <li><a href="Node_11.md">Node 11</a></li>
+    <li><a href="Node_12.md">Node 12</a></li>
+  </ul>
+  <h2>First Ping — live cockpit status</h2>
+  <div class="status" id="cockpit">Loading cockpit /status …</div>
+  <script>
+    fetch('http://127.0.0.1:8093/status')
+      .then(r => r.json())
+      .then(j => {
+        document.getElementById('cockpit').innerHTML =
+          '<pre>' + JSON.stringify(j, null, 2) + '</pre>';
+      })
+      .catch(e => {
+        document.getElementById('cockpit').textContent =
+          'Cockpit unreachable (start: docker compose up -d cockpit). ' + e;
+      });
+  </script>
+</body>
+</html>

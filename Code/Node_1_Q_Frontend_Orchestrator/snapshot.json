@@ -1,0 +1,8 @@
+{
+  "node": 1,
+  "agent": "Q",
+  "phase": "PARTIAL-LIVE",
+  "cockpit_port": 8093,
+  "intranet_port": 8092,
+  "last_boot_utc": null
+}

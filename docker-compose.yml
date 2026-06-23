@@ -11,3 +11,23 @@ services:
     volumes:
       - ./Agent_Bridge:/usr/share/nginx/html:ro
     restart: unless-stopped
+
+  cockpit:
+    image: python:3.12-slim
+    container_name: crimson-cockpit
+    ports:
+      - "8093:8093"
+    volumes:
+      - .:/app
+    working_dir: /app
+    environment:
+      COCKPIT_HOST: "0.0.0.0"
+      COCKPIT_PORT: "8093"
+      INTRANET_URL: "http://intranet/Node_0.md"
+      BUILD_LOG_PATH: "/app/data/build_log.jsonl"
+    command: >
+      sh -c "pip install -q pydantic &&
+             python Code/Node_1_Q_Frontend_Orchestrator/cockpit_server.py"
+    depends_on:
+      - intranet
+    restart: unless-stopped

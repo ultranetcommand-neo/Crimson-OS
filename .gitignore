@@ -24,6 +24,9 @@ Desktop.ini
 # Logs
 *.log
 build_log.jsonl
+data/build_log.jsonl
+Agent_Bridge/finance_*.md
+Geometric_Unity_Validation/proofs/benchmark_results.json
 
 # Research cache (regenerate via REPRODUCE.md)
 Geometric_Unity_Validation/jhtdb_metrics_cache.npz

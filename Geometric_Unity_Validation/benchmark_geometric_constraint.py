@@ -27,6 +27,10 @@ import math
 import random
 import json
 from datetime import datetime, timezone
+from pathlib import Path
+
+_SCRIPT_DIR = Path(__file__).resolve().parent
+_PROOFS_DIR = _SCRIPT_DIR / "proofs"
 
 THETA = math.acos(1/3)
 
@@ -216,13 +220,14 @@ def main():
         "timestamp": timestamp,
         "experiments": all_results,
     }
-    json_path = "proofs/benchmark_results.json"
-    with open(json_path, "w") as f:
-        json.dump(output, f, indent=2)
+    _PROOFS_DIR.mkdir(parents=True, exist_ok=True)
+    json_path = _PROOFS_DIR / "benchmark_results.json"
+    json_path.write_text(json.dumps(output, indent=2), encoding="utf-8")
     print(f"Results written to {json_path}")
     print()
     print("=" * 72)
-    print("  Reproducible. Run it yourself: python3 proofs/benchmark_geometric_constraint.py")
+    print("  Reproducible. Run it yourself:")
+    print(f"  python3 {Path(__file__).name}")
     print("=" * 72)
 
 
