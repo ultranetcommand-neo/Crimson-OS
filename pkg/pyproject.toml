@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crimsonos"
+version = "0.2.0"
+description = "T112 seal + lock-vs-lerp smoke bench. Algebra sucks. Geometry snaps."
+authors = [{ name = "Matthew Scott Gibson" }]
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.scripts]
+crimson-os = "crimson_os.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
