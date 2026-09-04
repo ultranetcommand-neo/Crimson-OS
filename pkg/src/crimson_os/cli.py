@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import argparse
 import json
-from pathlib import Path
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -16,6 +15,7 @@ def main(argv: list[str] | None = None) -> int:
     d.add_argument("path")
     d.add_argument("text")
     d.add_argument("--iota-off", action="store_true")
+    sub.add_parser("github-ping", help="GET /user if seal HOLD and GITHUB_TOKEN set")
     args = p.parse_args(argv)
 
     if args.cmd == "seal":
@@ -36,6 +36,11 @@ def main(argv: list[str] | None = None) -> int:
         from .connectors import fs_drop
 
         print(json.dumps(fs_drop(args.path, args.text, iota_on=not args.iota_off)))
+        return 0
+    if args.cmd == "github-ping":
+        from .connectors.github_ping import github_ping
+
+        print(json.dumps(github_ping(True)))
         return 0
     p.print_help()
     return 2
