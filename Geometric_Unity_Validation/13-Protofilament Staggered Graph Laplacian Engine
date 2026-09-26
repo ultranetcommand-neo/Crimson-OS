@@ -1,0 +1,150 @@
+"""
+13-Protofilament Staggered Graph Laplacian Engine
+Author: Matthew S. Gibson
+Project: Crimson OS / Real General Intelligence
+License: Apache 2.0 / CC BY 4.0
+
+Description:
+Computes the dissipative Graph Laplacian (L = D - A) over a discrete 2D 13-PF 
+microtubule lattice (390 nodes) with a half-node vertical seam offset.
+"""
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Default Verification Parameters
+SEEDS = [42, 101, 2023]
+N_PF = 13          # 13 Protofilaments
+N_LEN = 30         # 30 Longitudinal Nodes -> 390 Total Nodes
+STEPS = 2000
+DT = 0.01
+
+FREQ_KHZ = 10.0
+FREQ_MHZ = 50.0
+FREQ_GHZ = 120.0
+
+def build_13pf_staggered_adjacency(n_pf=13, n_len=30, seam_offset=1, active_seam=True):
+    """
+    Constructs the 390x390 discrete adjacency matrix A with an explicit half-node 
+    vertical seam shift between PF 12 and PF 0.
+    """
+    n_nodes = n_pf * n_len
+    A = np.zeros((n_nodes, n_nodes), dtype=np.float32)
+
+    def node_id(pf, l):
+        return (pf % n_pf) * n_len + (l % n_len)
+
+    for pf in range(n_pf):
+        for l in range(n_len):
+            u = node_id(pf, l)
+            
+            # Longitudinal bonds
+            if l > 0: 
+                A[u, node_id(pf, l - 1)] = 1.0
+            if l < n_len - 1: 
+                A[u, node_id(pf, l + 1)] = 1.0
+
+            # Lateral cylinder bonds
+            if pf < n_pf - 1:
+                A[u, node_id(pf + 1, l)] = 1.0
+                A[node_id(pf + 1, l), u] = 1.0
+            elif active_seam:
+                # Seam bond with vertical offset shift
+                v_seam = node_id(0, (l + seam_offset) % n_len)
+                A[u, v_seam] = 1.0
+                A[v_seam, u] = 1.0
+
+    return A
+
+def detect_staircase_steps(p_history, delta_threshold=0.0005, window=20):
+    """
+    Identifies discrete plateau steps where rate of pressure change |dP/dt| < threshold.
+    """
+    p_arr = np.array(p_history)
+    dp = np.abs(np.diff(p_arr))
+    kernel = np.ones(window) / window
+    smooth_dp = np.convolve(dp, kernel, mode='valid')
+    return np.where(smooth_dp < delta_threshold)[0] + window
+
+def run_discrete_sim(seed, condition="seamed_active", seam_offset=1):
+    """
+    Executes the dissipative discrete graph integration using L = D - A.
+    """
+    np.random.seed(seed)
+    n_nodes = N_PF * N_LEN
+    
+    active_seam = condition in ["seamed_active", "seamed_passive"]
+    has_osc = condition in ["seamed_active", "annealed"]
+
+    A = build_13pf_staggered_adjacency(N_PF, N_LEN, seam_offset=seam_offset, active_seam=active_seam)
+    
+    # Correct Dissipative Graph Laplacian: L = D - A
+    D = np.diag(np.sum(A, axis=1))
+    L = D - A  
+
+    P = np.zeros(n_nodes, dtype=np.float32)
+    V = np.zeros(n_nodes, dtype=np.float32)
+
+    seam_nodes = np.concatenate([np.arange(0, N_LEN), np.arange((N_PF - 1) * N_LEN, N_PF * N_LEN)])
+    p_max_hist = []
+
+    for t_idx in range(STEPS):
+        t = t_idx * DT
+        
+        noise = np.random.normal(0, 0.002, size=n_nodes)
+        osc = (0.2 * np.sin(FREQ_KHZ * t) + 0.3 * np.sin(FREQ_MHZ * t) + 0.5 * np.sin(FREQ_GHZ * t)) if has_osc else 0.0
+        drive = 0.05 * (1.0 + osc)
+
+        # Dissipative Graph Flux: dP/dt = -L*P
+        flux = -np.dot(L, P) + noise
+
+        if condition == "seamed_active":
+            flux[seam_nodes] += drive
+            P[seam_nodes] = np.where(P[seam_nodes] > 0.5, 0.5 + 0.1 * np.tanh(P[seam_nodes] - 0.5), P[seam_nodes])
+        elif condition == "seamed_passive":
+            flux[seam_nodes] += drive
+        else:
+            flux += drive / n_nodes
+
+        V += (flux - 0.15 * V) * DT
+        P += V * DT
+
+        p_max_hist.append(np.max(P))
+
+    return np.array(p_max_hist)
+
+if __name__ == "__main__":
+    print("Running verification suite across 4 conditions and 3 seeds...")
+    conditions = ["seamed_active", "seamed_passive", "no_seam", "annealed"]
+    results = {cond: [] for cond in conditions}
+    total_plateau_steps = 0
+
+    for cond in conditions:
+        for seed in SEEDS:
+            p_hist = run_discrete_sim(seed=seed, condition=cond, seam_offset=1)
+            results[cond].append(p_hist)
+            if cond == "seamed_active":
+                steps = detect_staircase_steps(p_hist)
+                total_plateau_steps += len(steps)
+
+    print(f"Suite Complete. Total detected plateau steps in seamed_active: {total_plateau_steps}")
+    
+    # Export CSV Data Matrix
+    df_data = pd.DataFrame({cond: np.mean(results[cond], axis=0) for cond in conditions})
+    df_data.index.name = "time_step"
+    df_data.to_csv("discrete_13pf_seam_results.csv")
+    print("Exported: 'discrete_13pf_seam_results.csv'")
+
+    # Export Plot
+    plt.figure(figsize=(9, 5))
+    for cond in conditions:
+        plt.plot(df_data[cond], label=cond, linewidth=2 if cond == "seamed_active" else 1)
+    plt.title("Discrete Graph Laplacian ($L = D - A$) Response", fontweight="bold")
+    plt.xlabel("Time Step")
+    plt.ylabel("Maximum Pressure ($P_{max}$)")
+    plt.grid(True, linestyle="--", alpha=0.5)
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig("fig_staircase_plateaus.png", dpi=300)
+    print("Exported: 'fig_staircase_plateaus.png'")
